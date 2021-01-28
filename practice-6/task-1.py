@@ -13,16 +13,17 @@ class TrafficLight:
         '''
         :param num: Число повторений работы светофора
         '''
+        new_list = ['Красный', 'Желтый', 'Зеленый']
         for _ in range(num):
-            self.__color = 'Красный'
-            print(self.__color)
-            time.sleep(7)
-            self.__color = 'Желтый'
-            print(self.__color)
-            time.sleep(2)
-            self.__color = 'Зеленый'
-            print(self.__color)
-            time.sleep(5)
+            for i in new_list:
+                self.__color = i
+                print(self.__color)
+                if self.__color == 'Красный':
+                    time.sleep(7)
+                elif self.__color == 'Желтый':
+                    time.sleep(2)
+                else:
+                    time.sleep(5)
 
 
 traffic = TrafficLight()
